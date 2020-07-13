@@ -34,6 +34,14 @@ public class test1 {
             System.out.println(method.getName());
         }
 
+        System.out.println("=======================================================");
+        Constructor[] constructors = Node.class.getConstructors();
+        int j = constructors.length;
+        for (int a = 0 ; a<j;a++){
+            Constructor constructor = constructors[a];
+            System.out.println(constructor.getName());
+        }
+
 
         Class<?> clazz =String.class;
 
@@ -48,7 +56,7 @@ public class test1 {
         //Class的所有本身声明的方法，不限访问权限
         Method[] declaredMethods = clazz.getDeclaredMethods();
         //Class的所有public构造方法 包含父类的
-        Constructor<?>[] constructors = clazz.getConstructors();
+        Constructor<?>[] constructorss = clazz.getConstructors();
         //Class的所有本身声明的构造方法，不限访问权限
         Constructor<?>[] declaredConstructors = clazz.getDeclaredConstructors();
         //Class的所有public属性 包含父类的
@@ -61,5 +69,9 @@ public class test1 {
         boolean interface1 = clazz.isInterface();
 
 
+        StackTraceElement[] arr=Thread.currentThread().getStackTrace();
+
+        String clazzs = arr[0].getClassName();
+        int t=arr.length-3;
     }
 }

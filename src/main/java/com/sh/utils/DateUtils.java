@@ -391,8 +391,6 @@ public class DateUtils {
      * @return
      * @throws
      * @since
-     * <br><b>作者： 李会军</b>
-     * <br>创建时间：2015年9月16日 下午4:58:52
      */
 	public static String parseEnDateToCH(String date, String sourceFormat, String descFormat) {
 		SimpleDateFormat sdf_ch = new SimpleDateFormat(descFormat);
