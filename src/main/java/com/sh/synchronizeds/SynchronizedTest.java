@@ -27,6 +27,7 @@ public class SynchronizedTest {
 
     public static void main(String[] args) {
         final SynchronizedTest test = new SynchronizedTest();
-
+        test.method1();
+        test.method2();
     }
 }
